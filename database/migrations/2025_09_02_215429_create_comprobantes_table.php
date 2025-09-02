@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('personas', function (Blueprint $table) {
+        Schema::create('comprobantes', function (Blueprint $table) {
             $table->id();
-            $table->string('razon_social',80);
-            $table->string('direccion',80);
-            $table->string('tipo_persona',20);
-            $table->tinyInteger('estado')->default();
             $table->timestamps();
-
         });
     }
 
@@ -27,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('personas');
+        Schema::dropIfExists('comprobantes');
     }
 };
